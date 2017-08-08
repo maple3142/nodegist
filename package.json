@@ -1,9 +1,10 @@
 {
   "name": "nodegist",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.16.2"
+    "axios": "^0.16.2",
+    "object-hash": "^1.1.8"
   }
 }

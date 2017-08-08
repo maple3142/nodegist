@@ -7,19 +7,23 @@ simple usage(all the methods below):
 ```javascript
 var Gists=require('nodegist')
 
-var g=new Gists()
-g.add('a.txt','aaaaa')
-g.add('b.txt','bbbbb')
-g.setDescription('test desc')
-g.setPublic(true)
-g.create().then(response=>{
-	console.log(response)
+var g=new Gists({
+	files: {
+		'c.js': {
+			'content': 'var a=1'
+		}
+	}
 })
-
-//chaining
-new Gists().add('a.txt','aaaaa').create().then(response=>{
-	console.log(response)
-})
+g.add('a.txt','a')
+g.add('b.txt','b')
+g.remove('b.txt')
+g.desc('aaaaa')
+console.log(g.desc())
+g.public(true)
+	.description('test')
+	.create()
+	.then(d=>console.log(d.html_url))
+	.catch(e=>console.error(e))
 ```
 
 Respose Object Documentation:
