@@ -1,7 +1,7 @@
 A simple module allow you to create gists
 =========================================
 
-simple usage(all the methods below):
+example:
 ------------
 
 ```javascript
@@ -10,7 +10,7 @@ var Gists=require('nodegist')
 var g=new Gists({
 	files: {
 		'c.js': {
-			'content': 'var a=1'
+			content: 'var a=1'
 		}
 	}
 })
@@ -26,5 +26,4 @@ g.public(true)
 	.catch(e=>console.error(e))
 ```
 
-Respose Object Documentation:
-[github api v3](https://developer.github.com/v3/gists/#response-5)
+more information [here](https://maple3142.github.io/docs/nodegist/index.html)
