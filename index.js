@@ -1,14 +1,14 @@
 var hash=require('object-hash')
 var axios = require('axios')
 /**
- * @class Gists
+ * @constructor
  * @param {object=} options
  * @param {string=} options.desc same as options.description
  * @param {string=} options.description description of gist
  * @param {boolean=} options.public public or private
  */
 function Gists(options){
-	options=options||{}
+	options = options || {}
 	this._obj={
 		description: options.desc||options.description||'',
 		public: options.public||false,
@@ -95,4 +95,4 @@ Gists.prototype.create=function(){
 	})
 }
 
-module.exports=Gists
+module.exports = Gists
