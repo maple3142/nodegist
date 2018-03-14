@@ -1,6 +1,8 @@
 A simple module allow you to create gists
 =========================================
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/maple3142/nodegist.svg)](https://greenkeeper.io/)
+
 example:
 ------------
 
